@@ -1,0 +1,26 @@
+[build-system]
+requires = ["maturin>=1.2,<2.0"]
+build-backend = "maturin"
+
+
+[project]
+name = "pars"
+version = "0.1.0"
+description = "A (learning) Rust clone of parse - parse strings as easily as you `.format` them."
+authors = [{ name = "Jacob Hayes", email = "jacob.r.hayes@gmail.com" }]
+dependencies = []
+readme = "README.md"
+requires-python = ">= 3.12"
+
+
+[tool.maturin]
+python-source = "python"
+module-name = "pars._lowlevel"
+features = ["pyo3/extension-module"]
+
+
+[tool.rye]
+dev-dependencies = []
+generate-hashes = true
+managed = true
+universal = true
